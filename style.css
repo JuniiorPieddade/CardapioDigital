@@ -1,0 +1,117 @@
+
+body {
+    background-color: black;
+    color: yellow;
+}
+
+.DivTopo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Lanches {
+    font-family: 'Montserrat', sans-serif;
+    height: 50px;
+    border: 100%;
+    border-color: green;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-style: italic;
+}
+
+.Bebidas {
+    font-family: 'Montserrat', sans-serif;
+    height: 50px;
+    border: 100%;
+    border-color: green;
+    border-radius: 15px;
+    background-color: yellow;
+    color: black;
+    font-style: italic;
+}
+
+.Checkout {
+    font-family: 'Montserrat', sans-serif;
+    height: 50px;
+    border: 100%;
+    border-color: green;
+    border-radius: 15px;
+    background-color: yellow;
+    color: black;
+    font-style: italic;
+}
+
+
+
+
+.Titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.linhaHorizontal1 {
+    background-color: white;
+    width: 100%;
+    height: 3px;
+}
+
+.divlanche {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.checkLanche {
+    width: 30px;
+    height: 30px;
+    font: 20pt Arial;
+    display: block;
+}
+
+.checkLanche2 {
+    background-color: rgb(255, 255, 255);
+    border-color: yellow;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.checkLanche1 {
+    background-color: rgb(255, 255, 255);
+    border-color: yellow;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.checkBebida {
+    width: 30px;
+    height: 30px;
+    font: 20pt Arial;
+    display: none;
+}
+
+.descricao {
+    display: block;
+    color: white;
+    margin-left: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.preco {
+    color: yellow;
+}
+
+.botaoEnviar {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(122, 241, 122);
+    color: black;
+}
