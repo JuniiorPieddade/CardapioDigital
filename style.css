@@ -1,6 +1,6 @@
 
 body {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.904);
     color: yellow;
 }
 
@@ -81,6 +81,17 @@ body {
     border-radius: 5px;
 }
 
+.checkBebida2 {
+    background-color: rgb(255, 255, 255);
+    border-color: yellow;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
 .checkLanche1 {
     background-color: rgb(255, 255, 255);
     border-color: yellow;
@@ -88,6 +99,16 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 5px;
+}
+
+.checkBebida1 {
+    background-color: rgb(255, 255, 255);
+    border-color: yellow;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: none;
 }
 
 .checkBebida {
@@ -114,4 +135,13 @@ body {
     height: 30px;
     background-color: rgb(122, 241, 122);
     color: black;
+    display: none;
+}
+.PedidoTotal {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    background-color: white;
+    margin-left: 250px;
 }

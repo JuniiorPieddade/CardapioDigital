@@ -29,121 +29,135 @@ let ValorBebida6 = document.getElementById('bebida6')
 let botoes = document.getElementsByTagName('input')
 let botaoCheckout = document.getElementsByClassName('Checkout')[0]
 let linhaHorizontal = document.getElementsByClassName('linhaHorizontal1')
+let botaoProximo = document.getElementById('botaoProximo')
 let botaoEnviar = document.getElementById('botaoEnviar')
+let = painel = document.getElementsByClassName('PedidoTotal')[0]
+let = valorLanche = document.getElementsByClassName('preco')
 
-//eventes
 
-document.getElementsByClassName('botaoEnviar')[0].addEventListener('click', enviarPedido)
+//eventos
+
 document.getElementsByClassName('Bebidas')[0].addEventListener('click', mudarCategoria1)
 document.getElementsByClassName('Lanches')[0].addEventListener('click', mudarCategoria2)
-document.getElementsByClassName('botaoEnviar')[0].addEventListener('click', proximoPasso)
-document.getElementById('lanche+1').addEventListener('click', adicionarValor1)
-document.getElementById('lanche+2').addEventListener('click', adicionarValor2)
-document.getElementById('lanche+3').addEventListener('click', adicionarValor3)
-document.getElementById('lanche+4').addEventListener('click', adicionarValor4)
-document.getElementById('lanche+5').addEventListener('click', adicionarValor5)
-document.getElementById('lanche+6').addEventListener('click', adicionarValor6)
-document.getElementById('lanche-1').addEventListener('click', subtrairValor1)
-document.getElementById('lanche-2').addEventListener('click', subtrairValor2)
-document.getElementById('lanche-3').addEventListener('click', subtrairValor3)
-document.getElementById('lanche-4').addEventListener('click', subtrairValor4)
-document.getElementById('lanche-5').addEventListener('click', subtrairValor5)
-document.getElementById('lanche-6').addEventListener('click', subtrairValor6)
+document.getElementById('lanche+1').addEventListener('click', adicionarValorLanche1)
+document.getElementById('lanche+2').addEventListener('click', adicionarValorLanche2)
+document.getElementById('lanche+3').addEventListener('click', adicionarValorLanche3)
+document.getElementById('lanche+4').addEventListener('click', adicionarValorLanche4)
+document.getElementById('lanche+5').addEventListener('click', adicionarValorLanche5)
+document.getElementById('lanche+6').addEventListener('click', adicionarValorLanche6)
+document.getElementById('lanche-1').addEventListener('click', subtrairValorLanche1)
+document.getElementById('lanche-2').addEventListener('click', subtrairValorLanche2)
+document.getElementById('lanche-3').addEventListener('click', subtrairValorLanche3)
+document.getElementById('lanche-4').addEventListener('click', subtrairValorLanche4)
+document.getElementById('lanche-5').addEventListener('click', subtrairValorLanche5)
+document.getElementById('lanche-6').addEventListener('click', subtrairValorLanche6)
 
 // funções para selecionar a quantidade de produto
 
-function adicionarValor1(){
+function adicionarValorLanche1(){
 
     let adicionarValor = document.getElementById('lanche1')
-    if (adicionarValor.innerText >= 0)
-    return adicionarValor.innerText ++;
+    if (adicionarValor.innerText >= 0){
+    adicionarValor.innerText ++
+    painel.innerHTML = `<strong>Pedido Total<br>R$${adicionarValor.innerText*5}.00</strong>`
+    }
 
 }
 
-function adicionarValor2(){
+function adicionarValorLanche2(){
 
     let adicionarValor = document.getElementById('lanche2')
-    if (adicionarValor.innerText >= 0)
-    return adicionarValor.innerText ++;
+    if (adicionarValor.innerText >= 0){
+        adicionarValor.innerText ++
+        }
 
 }
 
-function adicionarValor3(){
+function adicionarValorLanche3(){
 
     let adicionarValor = document.getElementById('lanche3')
-    if (adicionarValor.innerText >= 0)
-    return adicionarValor.innerText ++;
+    if (adicionarValor.innerText >= 0){
+        adicionarValor.innerText ++
+        }
 
 }
 
-function adicionarValor4(){
+function adicionarValorLanche4(){
 
     let adicionarValor = document.getElementById('lanche4')
-    if (adicionarValor.innerText >= 0)
-    return adicionarValor.innerText ++;
+    if (adicionarValor.innerText >= 0){
+        adicionarValor.innerText ++
+        }
 
 }
 
-function adicionarValor5(){
+function adicionarValorLanche5(){
 
     let adicionarValor = document.getElementById('lanche5')
-    if (adicionarValor.innerText >= 0)
-    return adicionarValor.innerText ++;
+    if (adicionarValor.innerText >= 0){
+        adicionarValor.innerText ++
+        }
 
 }
 
-function adicionarValor6(){
+function adicionarValorLanche6(){
 
     let adicionarValor = document.getElementById('lanche6')
-    if (adicionarValor.innerText >= 0)
-    return adicionarValor.innerText ++;
+    if (adicionarValor.innerText >= 0){
+        adicionarValor.innerText ++
+        }
 
 }
 
-function subtrairValor1(){
+function subtrairValorLanche1(){
     let subtrairValor = document.getElementById('lanche1')
-    if (subtrairValor.innerText >= 1)
-    return subtrairValor.innerText --;
+    if (subtrairValor.innerText >= 1){
+    subtrairValor.innerText --
+    painel.innerHTML = `<strong>Pedido Total<br>R$${subtrairValor.innerText*5}.00</strong>`
+}
 }
 
-function subtrairValor2(){
+function subtrairValorLanche2(){
     let subtrairValor = document.getElementById('lanche2')
-    if (subtrairValor.innerText >= 1)
-    return subtrairValor.innerText --;
+    if (subtrairValor.innerText >= 1){
+        subtrairValor.innerText --}
 }
 
-function subtrairValor3(){
+function subtrairValorLanche3(){
     let subtrairValor = document.getElementById('lanche3')
-    if (subtrairValor.innerText >= 1)
-    return subtrairValor.innerText --;
+    if (subtrairValor.innerText >= 1){
+        subtrairValor.innerText --}
 }
 
-function subtrairValor4(){
+function subtrairValorLanche4(){
     let subtrairValor = document.getElementById('lanche4')
-    if (subtrairValor.innerText >= 1)
-    return subtrairValor.innerText --;
+    if (subtrairValor.innerText >= 1){
+        subtrairValor.innerText --}
 }
 
-function subtrairValor5(){
+function subtrairValorLanche5(){
     let subtrairValor = document.getElementById('lanche5')
-    if (subtrairValor.innerText >= 1)
-    return subtrairValor.innerText --;
+    if (subtrairValor.innerText >= 1){
+        subtrairValor.innerText --}
 }
 
-function subtrairValor6(){
+function subtrairValorLanche6(){
     let subtrairValor = document.getElementById('lanche6')
-    if (subtrairValor.innerText >= 1)
-    return subtrairValor.innerText --;
+    if (subtrairValor.innerText >= 1){
+        subtrairValor.innerText --}
 }
 
-// função 
-function enviarPedido(){
+// painel 
+
+
+// funções
+function enviarParaCheckout(){
     let ValorAtual = document.getElementById('lanche1')
     if (ValorAtual.innerText >= 1)
     return alert(ValorAtual.innerText)
 }
 
-// função
+
 
 function mudarCategoria1(){
     
@@ -181,6 +195,7 @@ function mudarCategoria1(){
     apagarDescricao3.style.display = 'none'
     apagarDescricao4.style.display = 'none'
     apagarDescricao5.style.display = 'none'
+    botaoProximo.style.display = 'block'
 
 }
 
@@ -258,6 +273,17 @@ function proximoPasso(){
     botoes[9].style.display = 'none'
     botoes[10].style.display = 'none'
     botoes[11].style.display = 'none'
+    botoes[12].style.display = 'none'
+    botoes[13].style.display = 'none'
+    botoes[14].style.display = 'none'
+    botoes[15].style.display = 'none'
+    botoes[16].style.display = 'none'
+    botoes[17].style.display = 'none'
+    botoes[18].style.display = 'none'
+    botoes[19].style.display = 'none'
+    botoes[20].style.display = 'none'
+    botoes[21].style.display = 'none'
+    botoes[22].style.display = 'none'
     botaoBebidas.style.background = 'black';
     botaoBebidas.style.color = 'White';
     botaoLanches.style.background = 'black';
