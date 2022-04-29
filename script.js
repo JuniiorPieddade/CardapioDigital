@@ -20,46 +20,61 @@ let valorLanche3 = document.getElementById('lanche3')
 let valorLanche4 = document.getElementById('lanche4')
 let valorLanche5 = document.getElementById('lanche5')
 let valorLanche6 = document.getElementById('lanche6')
-let ValorBebida1 = document.getElementById('bebida1')
-let ValorBebida2 = document.getElementById('bebida2')
-let ValorBebida3 = document.getElementById('bebida3')
-let ValorBebida4 = document.getElementById('bebida4')
-let ValorBebida5 = document.getElementById('bebida5')
-let ValorBebida6 = document.getElementById('bebida6')
+let valorBebida1 = document.getElementById('bebida1')
+let valorBebida2 = document.getElementById('bebida2')
+let valorBebida3 = document.getElementById('bebida3')
+let valorBebida4 = document.getElementById('bebida4')
+let valorBebida5 = document.getElementById('bebida5')
+let valorBebida6 = document.getElementById('bebida6')
 let botoes = document.getElementsByTagName('input')
 let botaoCheckout = document.getElementsByClassName('Checkout')[0]
 let linhaHorizontal = document.getElementsByClassName('linhaHorizontal1')
 let botaoProximo = document.getElementById('botaoProximo')
 let botaoEnviar = document.getElementById('botaoEnviar')
-let = painel = document.getElementsByClassName('PedidoTotal')[0]
-let = valorLanche = document.getElementsByClassName('preco')
-
+let painel = document.getElementsByClassName('PedidoTotal')[0]
+let valorLanche = document.getElementsByClassName('preco')
+let CategoriaBebidas = document.getElementsByClassName('Bebidas')[0]
+let CategoriaLanches = document.getElementsByClassName('Lanches')[0]
+let botaoAddLanche = document.getElementsByClassName('checkLanche2')
+let botaoSubLanche = document.getElementsByClassName('checkLanche1')
+let botaoAddBebida = document.getElementsByClassName('checkBebida2')
+let botaoSubBebida = document.getElementsByClassName('checkBebida1')
 
 //eventos
 
-document.getElementsByClassName('Bebidas')[0].addEventListener('click', mudarCategoria1)
-document.getElementsByClassName('Lanches')[0].addEventListener('click', mudarCategoria2)
-document.getElementById('lanche+1').addEventListener('click', adicionarValorLanche1)
-document.getElementById('lanche+2').addEventListener('click', adicionarValorLanche2)
-document.getElementById('lanche+3').addEventListener('click', adicionarValorLanche3)
-document.getElementById('lanche+4').addEventListener('click', adicionarValorLanche4)
-document.getElementById('lanche+5').addEventListener('click', adicionarValorLanche5)
-document.getElementById('lanche+6').addEventListener('click', adicionarValorLanche6)
-document.getElementById('lanche-1').addEventListener('click', subtrairValorLanche1)
-document.getElementById('lanche-2').addEventListener('click', subtrairValorLanche2)
-document.getElementById('lanche-3').addEventListener('click', subtrairValorLanche3)
-document.getElementById('lanche-4').addEventListener('click', subtrairValorLanche4)
-document.getElementById('lanche-5').addEventListener('click', subtrairValorLanche5)
-document.getElementById('lanche-6').addEventListener('click', subtrairValorLanche6)
+CategoriaBebidas.addEventListener('click', mudarCategoriaBebidas)
+CategoriaLanches.addEventListener('click', mudarCategoriaLanches)
+botaoAddLanche[0].addEventListener('click', adicionarValorLanche1)
+botaoAddLanche[1].addEventListener('click', adicionarValorLanche2)
+botaoAddLanche[2].addEventListener('click', adicionarValorLanche3)
+botaoAddLanche[3].addEventListener('click', adicionarValorLanche4)
+botaoAddLanche[4].addEventListener('click', adicionarValorLanche5)
+botaoAddLanche[5].addEventListener('click', adicionarValorLanche6)
+botaoSubLanche[0].addEventListener('click', subtrairValorLanche1)
+botaoSubLanche[1].addEventListener('click', subtrairValorLanche2)
+botaoSubLanche[2].addEventListener('click', subtrairValorLanche3)
+botaoSubLanche[3].addEventListener('click', subtrairValorLanche4)
+botaoSubLanche[4].addEventListener('click', subtrairValorLanche5)
+botaoSubLanche[5].addEventListener('click', subtrairValorLanche6)
+botaoAddBebida[0].addEventListener('click', adicionarValorBebida1)
+botaoAddBebida[1].addEventListener('click', adicionarValorBebida2)
+botaoAddBebida[2].addEventListener('click', adicionarValorBebida3)
+botaoAddBebida[3].addEventListener('click', adicionarValorBebida4)
+botaoAddBebida[4].addEventListener('click', adicionarValorBebida5)
+botaoAddBebida[5].addEventListener('click', adicionarValorBebida6)
+botaoSubBebida[0].addEventListener('click', subtrairValorBebida1)
+botaoSubBebida[1].addEventListener('click', subtrairValorBebida2)
+botaoSubBebida[2].addEventListener('click', subtrairValorBebida3)
+botaoSubBebida[3].addEventListener('click', subtrairValorBebida4)
+botaoSubBebida[4].addEventListener('click', subtrairValorBebida5)
+botaoSubBebida[5].addEventListener('click', subtrairValorBebida6)
 
 // funções para selecionar a quantidade de produto
 
 function adicionarValorLanche1(){
 
-    let adicionarValor = document.getElementById('lanche1')
-    if (adicionarValor.innerText >= 0){
-    adicionarValor.innerText ++
-    painel.innerHTML = `<strong>Pedido Total<br>R$${adicionarValor.innerText*5}.00</strong>`
+    if (valorLanche1.innerText >= 0){
+    valorLanche1.innerText ++
     }
 
 }
@@ -68,8 +83,8 @@ function adicionarValorLanche2(){
 
     let adicionarValor = document.getElementById('lanche2')
     if (adicionarValor.innerText >= 0){
-        adicionarValor.innerText ++
-        }
+    adicionarValor.innerText ++
+}
 
 }
 
@@ -147,6 +162,80 @@ function subtrairValorLanche6(){
         subtrairValor.innerText --}
 }
 
+function adicionarValorBebida1(){
+
+    if (valorBebida1.innerText >= 0){
+    valorBebida1.innerText ++
+    }
+
+}
+
+function adicionarValorBebida2(){
+
+    if (valorBebida2.innerText >= 0){
+    valorBebida2.innerText ++
+    }
+
+}
+function adicionarValorBebida3(){
+
+    if (valorBebida3.innerText >= 0){
+    valorBebida3.innerText ++
+    }
+
+}
+function adicionarValorBebida4(){
+
+    if (valorBebida4.innerText >= 0){
+    valorBebida4.innerText ++
+    }
+
+}
+function adicionarValorBebida5(){
+
+    if (valorBebida5.innerText >= 0){
+    valorBebida5.innerText ++
+    }
+
+}
+function adicionarValorBebida6(){
+
+    if (valorBebida6.innerText >= 0){
+    valorBebida6.innerText ++
+    }
+
+}
+
+function subtrairValorBebida1(){
+    if (valorBebida1.innerText >= 1){
+    valorBebida1.innerText --}
+}
+
+function subtrairValorBebida2(){
+    if (valorBebida2.innerText >= 1){
+        valorBebida2.innerText --}
+}
+
+function subtrairValorBebida3(){
+    if (valorBebida3.innerText >= 1){
+        valorBebida3.innerText --}
+}
+
+function subtrairValorBebida4(){
+    if (valorBebida4.innerText >= 1){
+        valorBebida4.innerText --}
+}
+
+function subtrairValorBebida5(){
+    if (valorBebida5.innerText >= 1){
+        valorBebida5.innerText --}
+}
+
+function subtrairValorBebida6(){
+    if (valorBebida6.innerText >= 1){
+        valorBebida6.innerText --}
+}
+
 // painel 
 
 
@@ -159,8 +248,7 @@ function enviarParaCheckout(){
 
 
 
-function mudarCategoria1(){
-    
+function mudarCategoriaBebidas(){
     //botoes superiores
 
     botaoBebidas.style.background = 'black';
@@ -174,12 +262,37 @@ function mudarCategoria1(){
     valorLanche4.style.display = 'none'
     valorLanche5.style.display = 'none'
     valorLanche6.style.display = 'none'
-    ValorBebida1.style.display = 'block'
-    ValorBebida2.style.display = 'block'
-    ValorBebida3.style.display = 'block'
-    ValorBebida4.style.display = 'block'
-    ValorBebida5.style.display = 'block'
-    ValorBebida6.style.display = 'block'
+    valorBebida1.style.display = 'block'
+    valorBebida2.style.display = 'block'
+    valorBebida3.style.display = 'block'
+    valorBebida4.style.display = 'block'
+    valorBebida5.style.display = 'block'
+    valorBebida6.style.display = 'block'
+    botaoAddLanche[0].style.display = 'none'
+    botaoAddLanche[1].style.display = 'none'
+    botaoAddLanche[2].style.display = 'none'
+    botaoAddLanche[3].style.display = 'none'
+    botaoAddLanche[4].style.display = 'none'
+    botaoAddLanche[5].style.display = 'none'
+    botaoSubLanche[0].style.display = 'none'
+    botaoSubLanche[1].style.display = 'none'
+    botaoSubLanche[2].style.display = 'none'
+    botaoSubLanche[3].style.display = 'none'
+    botaoSubLanche[4].style.display = 'none'
+    botaoSubLanche[5].style.display = 'none'
+    botaoAddBebida[0].style.display = 'block'
+    botaoAddBebida[1].style.display = 'block'
+    botaoAddBebida[2].style.display = 'block'
+    botaoAddBebida[3].style.display = 'block'
+    botaoAddBebida[4].style.display = 'block'
+    botaoAddBebida[5].style.display = 'block'
+    botaoSubBebida[0].style.display = 'block'
+    botaoSubBebida[1].style.display = 'block'
+    botaoSubBebida[2].style.display = 'block'
+    botaoSubBebida[3].style.display = 'block'
+    botaoSubBebida[4].style.display = 'block'
+    botaoSubBebida[5].style.display = 'block'
+
    
     // nomes lanches para bebidas
 
@@ -195,11 +308,12 @@ function mudarCategoria1(){
     apagarDescricao3.style.display = 'none'
     apagarDescricao4.style.display = 'none'
     apagarDescricao5.style.display = 'none'
+    // botao proximo
     botaoProximo.style.display = 'block'
 
 }
 
-function mudarCategoria2(){
+function mudarCategoriaLanches(){
     //botoes superiores
     botaoBebidas.style.background = 'yellow';
     botaoBebidas.style.color = 'black';
@@ -212,12 +326,38 @@ function mudarCategoria2(){
     valorLanche4.style.display = 'block'
     valorLanche5.style.display = 'block'
     valorLanche6.style.display = 'block'
-    ValorBebida1.style.display = 'none'
-    ValorBebida2.style.display = 'none'
-    ValorBebida3.style.display = 'none'
-    ValorBebida4.style.display = 'none'
-    ValorBebida5.style.display = 'none'
-    ValorBebida6.style.display = 'none'
+    valorBebida1.style.display = 'none'
+    valorBebida2.style.display = 'none'
+    valorBebida3.style.display = 'none'
+    valorBebida4.style.display = 'none'
+    valorBebida5.style.display = 'none'
+    valorBebida6.style.display = 'none'
+    botaoAddLanche[0].style.display = 'block'
+    botaoAddLanche[1].style.display = 'block'
+    botaoAddLanche[2].style.display = 'block'
+    botaoAddLanche[3].style.display = 'block'
+    botaoAddLanche[4].style.display = 'block'
+    botaoAddLanche[5].style.display = 'block'
+    botaoSubLanche[0].style.display = 'block'
+    botaoSubLanche[1].style.display = 'block'
+    botaoSubLanche[2].style.display = 'block'
+    botaoSubLanche[3].style.display = 'block'
+    botaoSubLanche[4].style.display = 'block'
+    botaoSubLanche[5].style.display = 'block'
+    botaoAddBebida[0].style.display = 'none'
+    botaoAddBebida[1].style.display = 'none'
+    botaoAddBebida[2].style.display = 'none'
+    botaoAddBebida[3].style.display = 'none'
+    botaoAddBebida[4].style.display = 'none'
+    botaoAddBebida[5].style.display = 'none'
+    botaoSubBebida[0].style.display = 'none'
+    botaoSubBebida[1].style.display = 'none'
+    botaoSubBebida[2].style.display = 'none'
+    botaoSubBebida[3].style.display = 'none'
+    botaoSubBebida[4].style.display = 'none'
+    botaoSubBebida[5].style.display = 'none'
+    // botao prox
+    botaoProximo.style.display = 'none'
 
     // nomes lanches para bebidas
 
