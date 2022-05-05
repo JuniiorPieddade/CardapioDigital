@@ -139,9 +139,9 @@ body {
 }
 .PedidoTotal {
     font-family: 'Montserrat', sans-serif;
+    width: 100px;
     display: flex;
-    justify-content: flex-end;
+    margin-block-start: auto;
     color: black;
     background-color: white;
-    margin-left: 250px;
 }
