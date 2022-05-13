@@ -140,8 +140,23 @@ body {
 .PedidoTotal {
     font-family: 'Montserrat', sans-serif;
     width: 100px;
-    display: flex;
+    display: none;
     margin-block-start: auto;
     color: black;
     background-color: white;
+}
+
+
+.finalizar {
+    margin: auto;
+    border-radius: 5px;
+    background-color: white;
+    width: 150px;
+    height: auto;
+    color: black;
+}
+
+.divisaoCheckoutB, .divisaoCheckoutL {
+    text-align: center;
+    display: none;
 }

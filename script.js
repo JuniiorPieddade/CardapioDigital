@@ -1,4 +1,4 @@
-// variaveis
+// variaveis // teste
 
 let botaoBebidas = document.getElementsByClassName('Bebidas')[0]
 let botaoLanches = document.getElementsByClassName('Lanches')[0]
@@ -39,6 +39,10 @@ let botaoAddLanche = document.getElementsByClassName('checkLanche2')
 let botaoSubLanche = document.getElementsByClassName('checkLanche1')
 let botaoAddBebida = document.getElementsByClassName('checkBebida2')
 let botaoSubBebida = document.getElementsByClassName('checkBebida1')
+let lancheCheckout = document.getElementsByClassName('checkoutLanche')
+let bebidaCheckout = document.getElementsByClassName('checkoutBebida')
+let divCheckL = document.getElementsByClassName('divisaoCheckoutL')[0]
+let divCheckB = document.getElementsByClassName('divisaoCheckoutB')[0]
 
 //eventos
 
@@ -83,7 +87,7 @@ function adicionarValorLanche2(){
 
     let adicionarValor = document.getElementById('lanche2')
     if (adicionarValor.innerText >= 0){
-    adicionarValor.innerText ++
+    adicionarValor.innerText ++;
 }
 
 }
@@ -236,6 +240,8 @@ function subtrairValorBebida6(){
         valorBebida6.innerText --}
 }
 
+
+
 // painel 
 
 
@@ -376,7 +382,9 @@ function mudarCategoriaLanches(){
 
 }
 
-function proximoPasso(){  
+function proximoPasso(){ 
+    botaoEnviar.style.display = 'block'
+    botaoProximo.style.display = 'none'
     Hamburguer.style.display = 'none'
     xBurger.style.display = 'none'
     eggsBurguer.style.display = 'none'
@@ -395,35 +403,36 @@ function proximoPasso(){
     valorLanche4.style.display = 'none'
     valorLanche5.style.display = 'none'
     valorLanche6.style.display = 'none'
-    ValorBebida1.style.display = 'none'
-    ValorBebida2.style.display = 'none'
-    ValorBebida3.style.display = 'none'
-    ValorBebida4.style.display = 'none'
-    ValorBebida5.style.display = 'none'
-    ValorBebida6.style.display = 'none'
-    botoes[0].style.display = 'none'
-    botoes[1].style.display = 'none'
-    botoes[2].style.display = 'none'
-    botoes[3].style.display = 'none'
-    botoes[4].style.display = 'none'
-    botoes[5].style.display = 'none'
-    botoes[6].style.display = 'none'
-    botoes[7].style.display = 'none'
-    botoes[8].style.display = 'none'
-    botoes[9].style.display = 'none'
-    botoes[10].style.display = 'none'
-    botoes[11].style.display = 'none'
-    botoes[12].style.display = 'none'
-    botoes[13].style.display = 'none'
-    botoes[14].style.display = 'none'
-    botoes[15].style.display = 'none'
-    botoes[16].style.display = 'none'
-    botoes[17].style.display = 'none'
-    botoes[18].style.display = 'none'
-    botoes[19].style.display = 'none'
-    botoes[20].style.display = 'none'
-    botoes[21].style.display = 'none'
-    botoes[22].style.display = 'none'
+    valorBebida1.style.display = 'none'
+    valorBebida2.style.display = 'none'
+    valorBebida3.style.display = 'none'
+    valorBebida4.style.display = 'none'
+    valorBebida5.style.display = 'none'
+    valorBebida6.style.display = 'none'
+    botaoAddLanche[0].style.display = 'none'
+    botaoAddLanche[1].style.display = 'none'
+    botaoAddLanche[2].style.display = 'none'
+    botaoAddLanche[3].style.display = 'none'
+    botaoAddLanche[4].style.display = 'none'
+    botaoAddLanche[5].style.display = 'none'
+    botaoSubLanche[0].style.display = 'none'
+    botaoSubLanche[1].style.display = 'none'
+    botaoSubLanche[2].style.display = 'none'
+    botaoSubLanche[3].style.display = 'none'
+    botaoSubLanche[4].style.display = 'none'
+    botaoSubLanche[5].style.display = 'none'
+    botaoAddBebida[0].style.display = 'none'
+    botaoAddBebida[1].style.display = 'none'
+    botaoAddBebida[2].style.display = 'none'
+    botaoAddBebida[3].style.display = 'none'
+    botaoAddBebida[4].style.display = 'none'
+    botaoAddBebida[5].style.display = 'none'
+    botaoSubBebida[0].style.display = 'none'
+    botaoSubBebida[1].style.display = 'none'
+    botaoSubBebida[2].style.display = 'none'
+    botaoSubBebida[3].style.display = 'none'
+    botaoSubBebida[4].style.display = 'none'
+    botaoSubBebida[5].style.display = 'none'
     botaoBebidas.style.background = 'black';
     botaoBebidas.style.color = 'White';
     botaoLanches.style.background = 'black';
@@ -439,5 +448,121 @@ function proximoPasso(){
     linhaHorizontal[6].style.display = 'none'
     linhaHorizontal[7].style.display = 'none'
 
+        if (valorLanche1.innerText >= 1){
+            let valorLanche1Checkout = `*${valorLanche1.innerText} - Hambúrguer`
+            lancheCheckout[0].innerText = valorLanche1Checkout
+            divCheckL.style.display = 'block'
+        }
+
+        if (valorLanche2.innerText >= 1){
+            let valorLanche2Checkout = `*${valorLanche2.innerText} - X-Burguer`
+            lancheCheckout[1].innerText = valorLanche2Checkout
+            divCheckL.style.display = 'block'
+        }
+
+        if (valorLanche3.innerText >= 1){
+            let valorLanche3Checkout = `*${valorLanche3.innerText} - Eggs Burguer`
+            lancheCheckout[2].innerText = valorLanche3Checkout
+            divCheckL.style.display = 'block'
+        }
+
+        if (valorLanche4.innerText >= 1){
+            let valorLanche4Checkout = `*${valorLanche4.innerText} - Eggs Frango`
+            lancheCheckout[3].innerText = valorLanche4Checkout
+            divCheckL.style.display = 'block'
+        }
+
+        if (valorLanche5.innerText >= 1){
+            let valorLanche5Checkout = `*${valorLanche5.innerText} - Eggs Bacon`
+            lancheCheckout[4].innerText = valorLanche5Checkout
+            divCheckL.style.display = 'block'
+        }
+
+        if (valorLanche6.innerText >= 1){
+            let valorLanche6Checkout = `*${valorLanche6.innerText} - Eggs Calabresa`
+            lancheCheckout[5].innerText = valorLanche6Checkout
+            divCheckL.style.display = 'block'
+        }
+
+        if (valorBebida1.innerText >= 1){
+            let valorBebida1Checkout = `*${valorBebida1.innerText} - Coca Cola 1L`
+            bebidaCheckout[0].innerText = valorBebida1Checkout
+            divCheckB.style.display = 'block'
+        }
+
+        if (valorBebida2.innerText >= 1){
+            let valorBebida2Checkout = `*${valorBebida2.innerText} - Coca Cola Lata`
+            bebidaCheckout[1].innerText = valorBebida2Checkout
+            divCheckB.style.display = 'block'
+        }
+
+        if (valorBebida3.innerText >= 1){
+            let valorBebida3Checkout = `*${valorBebida3.innerText} - Fanta 1L`
+            bebidaCheckout[2].innerText = valorBebida3Checkout
+            divCheckB.style.display = 'block'
+        }
+
+        if (valorBebida4.innerText >= 1){
+            let valorBebida4Checkout = `*${valorBebida4.innerText} - Fanta Lata`
+            bebidaCheckout[3].innerText = valorBebida4Checkout
+            divCheckB.style.display = 'block'
+        }
+
+        if (valorBebida5.innerText >= 1){
+            let valorBebida5Checkout = `*${valorBebida5.innerText} - Guaraná 1L`
+            bebidaCheckout[4].innerText = valorBebida5Checkout
+            divCheckB.style.display = 'block'
+        }
+
+        if (valorBebida6.innerText >= 1){
+            let valorBebida6Checkout = `*${valorBebida6.innerText} - Guaraná Lata`
+            bebidaCheckout[5].innerText = valorBebida6Checkout
+            divCheckB.style.display = 'block'
+        }
+
+        let resultadoLanche1 = Number(valorLanche1.innerText)*5
+        let resultadoLanche2 = Number(valorLanche2.innerText)*7
+        let resultadoLanche3 = Number(valorLanche3.innerText)*8
+        let resultadoLanche4 = Number(valorLanche4.innerText)*12
+        let resultadoLanche5 = Number(valorLanche5.innerText)*12
+        let resultadoLanche6 = Number(valorLanche6.innerText)*12
+
+        let resultadoBebida1 = Number(valorBebida1.innerText)*7
+        let resultadoBebida2 = Number(valorBebida2.innerText)*3.5
+        let resultadoBebida3 = Number(valorBebida3.innerText)*6
+        let resultadoBebida4 = Number(valorBebida4.innerText)*3.5
+        let resultadoBebida5 = Number(valorBebida5.innerText)*6
+        let resultadoBebida6 = Number(valorBebida6.innerText)*3.5
+
+        let resultado = resultadoLanche1 + resultadoLanche2 + resultadoLanche3 + resultadoLanche4 + resultadoLanche5 + resultadoLanche6 + resultadoBebida1 + resultadoBebida2 + resultadoBebida3 + resultadoBebida4 + resultadoBebida5 + resultadoBebida6
+
+        painel.style.display = 'flex'
+        painel.innerHTML = `<strong>Pedido Total R$ ${resultado.toFixed(2)}</strong>`
+
+
 }
+
+function EnviarPedido(){
+    let enviarLanche1 = lancheCheckout[0].innerText
+    let enviarLanche2 = lancheCheckout[1].innerText
+    let enviarLanche3 = lancheCheckout[2].innerText
+    let enviarLanche4 = lancheCheckout[3].innerText
+    let enviarLanche5 = lancheCheckout[4].innerText
+    let enviarLanche6 = lancheCheckout[5].innerText
+
+    let enviarBebida1 = bebidaCheckout[0].innerText
+    let enviarBebida2 = bebidaCheckout[1].innerText
+    let enviarBebida3 = bebidaCheckout[2].innerText
+    let enviarBebida4 = bebidaCheckout[3].innerText
+    let enviarBebida5 = bebidaCheckout[4].innerText
+    let enviarBebida6 = bebidaCheckout[5].innerText
+
+    let totalPainel = painel.innerText
+
+    open(`wa.me/Lanches ${enviarLanche1} ${enviarLanche2} ${enviarLanche3} ${enviarLanche4} ${enviarLanche5} ${enviarLanche6}
+    ${enviarBebida1} ${enviarBebida2} ${enviarBebida3} ${enviarBebida4} ${enviarBebida5} ${enviarBebida6} Pedido Total R$ ${totalPainel}`)
+
+}
+
+
 
