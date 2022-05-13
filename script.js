@@ -559,8 +559,8 @@ function EnviarPedido(){
 
     let totalPainel = painel.innerText
 
-    open(`wa.me/Lanches ${enviarLanche1} ${enviarLanche2} ${enviarLanche3} ${enviarLanche4} ${enviarLanche5} ${enviarLanche6}
-    ${enviarBebida1} ${enviarBebida2} ${enviarBebida3} ${enviarBebida4} ${enviarBebida5} ${enviarBebida6} Pedido Total R$ ${totalPainel}`)
+    open(`https://wa.me/5579998329277?text=.:Lanches:.${enviarLanche1} ${enviarLanche2} ${enviarLanche3} ${enviarLanche4} ${enviarLanche5} ${enviarLanche6} .:Bebidas:.
+    ${enviarBebida1} ${enviarBebida2} ${enviarBebida3} ${enviarBebida4} ${enviarBebida5} ${enviarBebida6}${totalPainel}`)
 
 }
 
